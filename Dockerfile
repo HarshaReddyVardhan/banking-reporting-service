@@ -16,7 +16,7 @@ RUN go mod download
 COPY . .
 
 # Build the application
-RUN CGO_ENABLED=0 GOOS=linux go build -o reporting-service ./cmd/server
+RUN CGO_ENABLED=0 GOOS=linux go build -o reporting-service ./cmd/api
 
 # Run Stage
 FROM alpine:3.18
